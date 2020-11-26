@@ -4,6 +4,10 @@ if (shouldInjectScript()) {
   injectScript(inpageBundle)
 }
 
+// Contents of this file sourced from the MetaMask extension, whose behavior we
+// are attempting to mirror. Files copied as of:
+// https://github.com/MetaMask/metamask-extension/blob/6a9c15d4a4f22d9fd0b064c381c70fcca172c773/app/scripts/contentscript.js
+
 /**
  * Injects a script tag into the current document
  *

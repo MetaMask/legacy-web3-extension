@@ -2,20 +2,19 @@ const fs = require('fs')
 const path = require('path')
 
 const baseManifest = require('./manifests/_base.json')
-const { platforms, unpackedPath } = require('./util')
 
 const manifestsDirPath = path.resolve(__dirname, 'manifests')
 
-platforms.forEach((platformName) => {
-  const filename = `${platformName}.json`
-  const platformManifestPath = path.resolve(manifestsDirPath, filename)
+module.exports = function buildManifest (platformName, unpackedPath) {
+  const platformManifestPath = path.resolve(manifestsDirPath, `${platformName}.json`)
   const platformManifest = readJson(platformManifestPath)
   const manifest = { ...baseManifest, ...platformManifest }
+
   writeJson(
     manifest,
     path.resolve(unpackedPath, platformName, 'manifest.json'),
   )
-})
+}
 
 function readJson (file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'))

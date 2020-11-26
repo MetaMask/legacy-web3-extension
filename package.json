@@ -7,10 +7,7 @@
   "author": "Erik Marks <rekmarks@protonmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "./build-prep.sh && yarn build:manifest && yarn build:bundle && yarn build:zip",
-    "build:manifest": "node build/manifest.js",
-    "build:bundle": "node build/bundle.js",
-    "build:zip": "node build/zip.js",
+    "build": "./build-prep.sh && node build/main.js",
     "lint": "eslint . --ext js,json",
     "lint:fix": "eslint . --ext js,json --fix",
     "test": "yarn lint"

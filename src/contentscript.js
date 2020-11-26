@@ -1,5 +1,5 @@
 if (shouldInjectScript()) {
-  // We add and declare the inpage bundle variable in a later build step.
+  // We add and declare the inpage bundle variable during the build process.
   // eslint-disable-next-line no-undef
   injectScript(inpageBundle)
 }

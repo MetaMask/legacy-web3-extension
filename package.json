@@ -1,0 +1,39 @@
+{
+  "name": "legacy-web3-extension",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An extension that adds MetaMask's legacy web3 API to your browser.",
+  "repository": "git@github.com:MetaMask/legacy-web3-extension.git",
+  "author": "Erik Marks <rekmarks@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "./build-prep.sh && yarn build:manifest && yarn build:bundle && yarn build:zip",
+    "build:manifest": "node build/manifest.js",
+    "build:bundle": "node build/bundle.js",
+    "build:zip": "node build/zip.js",
+    "lint": "eslint . --ext js,json",
+    "lint:fix": "eslint . --ext js,json --fix",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "@metamask/legacy-web3": "^1.2.0"
+  },
+  "devDependencies": {
+    "@metamask/eslint-config": "^4.1.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "eslint": "^7.14.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-node": "^11.1.0",
+    "get-stream": "^6.0.0",
+    "quote-stream": "^1.0.2",
+    "rollup": "^2.33.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "yazl": "^2.5.1"
+  },
+  "engines": {
+    "node": "^10.18.1",
+    "yarn": "^1.16.0"
+  }
+}

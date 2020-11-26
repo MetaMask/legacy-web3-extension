@@ -1,3 +1,7 @@
+# build
+dist
+build/temp
+
 # Logs
 logs
 *.log

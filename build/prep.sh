@@ -5,6 +5,8 @@ set -e
 set -u
 set -o pipefail
 
+# ATTN: Only run this file from the project root directory
+
 mkdir -p build/temp
 rm -rf build/temp/*
 

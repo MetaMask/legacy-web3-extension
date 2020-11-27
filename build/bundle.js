@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
-const quote = require('quote-stream')
 const getStream = require('get-stream')
+const quoteStream = require('quote-stream')
 
 const rollup = require('rollup')
 const { default: resolve } = require('@rollup/plugin-node-resolve')
@@ -9,13 +9,12 @@ const commonjs = require('@rollup/plugin-commonjs')
 const { terser } = require('rollup-plugin-terser')
 
 const contentScriptTempPath = path.resolve(__dirname, 'temp/contentscript.js')
-const contentScriptBundlePath = path.resolve(__dirname, '../dist/bundles/contentscript.js')
 
 /**
  * Builds the extension's minified content script.
  */
 module.exports = async function bundle () {
-  await addInpageBundle()
+  await addInpageToContentScript()
 
   const inputOptions = {
     input: contentScriptTempPath,
@@ -26,14 +25,7 @@ module.exports = async function bundle () {
       }),
     ],
   }
-
-  const outputOptions = {
-    file: contentScriptBundlePath,
-    format: 'iife',
-    plugins: [
-      terser(),
-    ],
-  }
+  const outputOptions = { format: 'iife', plugins: [terser()] }
 
   const { output } = await rollup.rollup(inputOptions)
     .then((rollupBundle) => rollupBundle.generate(outputOptions))
@@ -49,7 +41,7 @@ module.exports = async function bundle () {
  * Adds the inpage script bundle string to the content script so that it can be
  * injected into the page.
  */
-async function addInpageBundle () {
+async function addInpageToContentScript () {
   const contentScriptSource = path.resolve(__dirname, '../src/contentscript.js')
   const web3Source = path.resolve(
     __dirname,
@@ -71,6 +63,6 @@ async function addInpageBundle () {
  */
 function getQuotedSource (filePath) {
   return getStream(
-    fs.createReadStream(filePath, { encoding: 'utf8' }).pipe(quote()),
+    fs.createReadStream(filePath, { encoding: 'utf8' }).pipe(quoteStream()),
   )
 }

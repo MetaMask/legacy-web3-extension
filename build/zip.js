@@ -13,7 +13,10 @@ module.exports = function zip (platformName, unpackedPath, packedPath) {
       path.resolve(unpackedPath, platformName, CONTENT_SCRIPT),
       CONTENT_SCRIPT,
     )
-    zipFile.addFile(path.resolve(unpackedPath, platformName, MANIFEST), MANIFEST)
+    zipFile.addFile(
+      path.resolve(unpackedPath, platformName, MANIFEST),
+      MANIFEST,
+    )
     zipFile.end()
 
     zipFile.outputStream

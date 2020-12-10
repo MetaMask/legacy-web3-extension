@@ -2,7 +2,7 @@
   "name": "legacy-web3-extension",
   "version": "0.0.0",
   "private": true,
-  "description": "An extension that adds MetaMask's legacy web3 API to your browser.",
+  "description": "An extension that adds MetaMask's legacy window.web3 API to your browser.",
   "repository": "git@github.com:MetaMask/legacy-web3-extension.git",
   "author": "Erik Marks <rekmarks@protonmail.com>",
   "license": "MIT",

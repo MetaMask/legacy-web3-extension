@@ -1,4 +1,8 @@
 {
+  "name": "MetaMask Legacy Web3",
+  "short_name": "MetaMask Legacy Web3",
+  "version": "1.0.0",
+  "description": "An extension that adds MetaMask's legacy web3 API to your browser.",
   "author": "https://metamask.io",
   "content_scripts": [
     {
@@ -8,9 +12,10 @@
       "all_frames": true
     }
   ],
-  "description": "An extension that adds MetaMask's legacy web3 API to your browser.",
-  "manifest_version": 2,
-  "name": "MetaMask Legacy Web3",
-  "short_name": "MetaMask Legacy Web3",
-  "version": "1.0.0"
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "manifest_version": 2
 }

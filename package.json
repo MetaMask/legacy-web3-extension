@@ -23,6 +23,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-node": "^11.1.0",
+    "fs-extra": "^9.0.1",
     "get-stream": "^6.0.0",
     "quote-stream": "^1.0.2",
     "rollup": "^2.33.3",

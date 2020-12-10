@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const manifest = require('./manifest')
+const icons = require('./icons')
 const bundle = require('./bundle')
 const zip = require('./zip')
 
@@ -18,6 +19,9 @@ async function build () {
   platforms.forEach(async (platformName) => {
     // create manifest for each platform
     manifest(platformName, unpackedPath)
+
+    // copy icons for each platform
+    icons(platformName, unpackedPath)
 
     // copy contentscript bundle to each platform folder
     fs.writeFileSync(

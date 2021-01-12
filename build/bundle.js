@@ -6,7 +6,6 @@ const quoteStream = require('quote-stream')
 const rollup = require('rollup')
 const { default: resolve } = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
-const { terser } = require('rollup-plugin-terser')
 
 const contentScriptTempPath = path.resolve(__dirname, 'temp/contentscript.js')
 
@@ -25,7 +24,7 @@ module.exports = async function bundle () {
       }),
     ],
   }
-  const outputOptions = { format: 'iife', plugins: [terser()] }
+  const outputOptions = { format: 'iife' }
 
   const { output } = await rollup.rollup(inputOptions)
     .then((rollupBundle) => rollupBundle.generate(outputOptions))

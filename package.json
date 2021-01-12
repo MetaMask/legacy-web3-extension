@@ -27,7 +27,6 @@
     "get-stream": "^6.0.0",
     "quote-stream": "^1.0.2",
     "rollup": "^2.33.3",
-    "rollup-plugin-terser": "^7.0.2",
     "yazl": "^2.5.1"
   },
   "engines": {

@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@metamask/eslint-config/-/eslint-config-4.1.0.tgz#ace2357af2d9c7d04da40a337fc7f4a81a048921"
   integrity sha512-oc4ONdFB1h2yxBebVj4ACYzGzArB8ZQKiFVNCDlYiTCyeQ/GR4+EUwg0KvlO33LlXCRbAhO3CX0nChbvIB8hEw==
 
-"@metamask/legacy-web3@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@metamask/legacy-web3/-/legacy-web3-1.2.0.tgz#7b075d0466de8a61e094be5430b842d39f85cebf"
-  integrity sha512-RSD2VATlDNbVjMAr9WSPEq5RL5z1R5I2lUXV50cAxn/hwqD1rHVdGharfiW+kadaTEemMp7pnyGQQuvStB8qUg==
+"@metamask/legacy-web3@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@metamask/legacy-web3/-/legacy-web3-2.0.0.tgz#10c506791ef248d79909ff6321a6b25a3f3d2549"
+  integrity sha512-hR5sbVR0wU3sXMXx2btRBKYzzTkBNTYoZbPHqqB7UARwxm9yEe9C/Y79YyciyzC9cnKetNV6s6VAwNQp5LNpLw==
 
 "@rollup/plugin-commonjs@^16.0.0":
   version "16.0.0"

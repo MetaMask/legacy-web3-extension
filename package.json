@@ -26,7 +26,7 @@
     "fs-extra": "^9.0.1",
     "get-stream": "^6.0.0",
     "quote-stream": "^1.0.2",
-    "rollup": "^2.33.3",
+    "rollup": "^2.79.2",
     "yazl": "^2.5.1"
   },
   "engines": {
